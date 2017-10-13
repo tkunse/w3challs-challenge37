@@ -1,0 +1,29 @@
+Simple. Plain Text in the EXE. I should find something more challenging.
+
+Tool: IDA
+
+.text:004819B0                 push    ebp
+.text:004819B1                 push    offset loc_481A33
+.text:004819B6                 push    dword ptr fs:[eax]
+.text:004819B9                 mov     fs:[eax], esp
+.text:004819BC                 lea     edx, [ebp+var_4]
+.text:004819BF                 mov     eax, [ebx+390h] ; this
+.text:004819C5                 call    sub_44B320
+.text:004819CA                 mov     eax, [ebp+var_4]
+.text:004819CD                 mov     edx, offset aPere_noel ; "pere_noel"
+.text:004819D2                 call    sub_405A44
+.text:004819D7                 jnz     short loc_481A0E
+.text:004819D9                 lea     edx, [ebp+var_8]
+.text:004819DC                 mov     eax, [ebx+378h] ; this
+.text:004819E2                 call    sub_44B320
+.text:004819E7                 mov     eax, [ebp+var_8]
+.text:004819EA                 mov     edx, offset aG3r0n1mo ; "g3r0N1mO"
+.text:004819EF                 call    sub_405A44
+.text:004819F4                 jnz     short loc_481A02
+.text:004819F6                 mov     eax, offset aBravo_VotreCad ; "Bravo. Votre cadeau est le mdp de valid"...
+.text:004819FB                 call    @Dialogs@ShowMessage$qqrx17System@AnsiString ; Dialogs::ShowMessage(System::AnsiString)
+.text:00481A00                 jmp     short loc_481A18
+
+Easy to understand that "pere_noel" is username and "g3r0N1mO" is password.
+
+And finally the flag is WiNdObE.
